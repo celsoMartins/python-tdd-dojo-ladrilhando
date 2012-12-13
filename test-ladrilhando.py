@@ -48,4 +48,20 @@ class TesteLadrilhando(unittest.TestCase):
 		calculadora = CalculadoraLadrilho(comodo, ladrilho)
 		self.assertEqual(calculadora.calcularQtd(), 1)
 
+	def test_retornar_4_para_ladrilho_metade_comodo(self):
+		a1 = Coordenada(0,0)
+		a2 = Coordenada(2,0)
+		a3 = Coordenada(2,2)
+		a4 = Coordenada(0,2)
+		ladrilho = Quadrilatero(a1, a2, a3, a4)
+
+		b1 = Coordenada(0,0)
+		b2 = Coordenada(4,0)
+		b3 = Coordenada(4,4)
+		b4 = Coordenada(0,4)
+		comodo = Quadrilatero(b1, b2, b3, b4)
+
+		calculadora = CalculadoraLadrilho(comodo, ladrilho)
+		self.assertEqual(calculadora.calcularQtd(), 4)
+
 unittest.main()
