@@ -8,4 +8,5 @@ class CalculadoraLadrilho:
 		self.ladrilho = ladrilho
 
 	def calcularQtd(self):
-		return 1
+		qtdLadrilhos = self.comodo.area() / self.ladrilho.area()
+		return qtdLadrilhos

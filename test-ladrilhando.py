@@ -37,4 +37,15 @@ class TesteLadrilhando(unittest.TestCase):
 		area = ladrilho.area()
 		self.assertEqual(ladrilho.area(), 4)
 
+	def test_retornar_1_para_ladrilho_tamanho_comodo(self):
+		a1 = Coordenada(0,0)
+		a2 = Coordenada(2,0)
+		a3 = Coordenada(2,2)
+		a4 = Coordenada(0,2)
+
+		ladrilho = Quadrilatero(a1, a2, a3, a4)
+		comodo = Quadrilatero(a1, a2, a3, a4)
+		calculadora = CalculadoraLadrilho(comodo, ladrilho)
+		self.assertEqual(calculadora.calcularQtd(), 1)
+
 unittest.main()

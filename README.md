@@ -1,3 +1,5 @@
+http://dojopuzzles.com/problemas/exibe/ladrilhando/
+
 Um arquiteto gosta muito de projetar salas em formato quadrangular, que normalmente não são tão complicadas de se construir, exceto quando os lados não são perpendiculares uns aos outros. Nestes casos, na hora de ladrilhar as salas, existe uma dificuldade em saber o número exato de ladrilhos retangulares que deverão ser utilizados para não haver desperdício dos ladrilhos que devem ser cortados para se ajustar o chão às paredes.
 Uma sala é definida pelos pontos (0, 0), (A, 0), (B, C) e (D, E) onde todas as coordenadas (A, B, C, D e E) são inteiros maiores que zero;
 Os vértices (B, C) e (D, E) não são coincidentes;
