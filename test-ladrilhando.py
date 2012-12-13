@@ -1,13 +1,12 @@
 import unittest
 from coordenada import Coordenada
-from comodo import Comodo
-from ladrilho import Ladrilho
+from quadrilatero import Quadrilatero
 from calculadora_ladrilho import CalculadoraLadrilho
 from linha import Linha
 
 class TesteLadrilhando(unittest.TestCase):
 	
-	# //TODO - Implementar teste
+	# // TODO - Implementar teste
 	# def test_nao_aceitar_ponto2_menor_que_ponto1(self):
 
 	def test_tamanho_linha_horizontal(self):
@@ -28,16 +27,14 @@ class TesteLadrilhando(unittest.TestCase):
 		linha = Linha(a1, a2)
 		self.assertEqual(linha.tamanho(), 10.63014581273465)
 
-	def test_1_ladrilho_para_comodo_do_tamanho_do_ladrilho(self):
+	def test_area_quadrilatero(self):
 		a1 = Coordenada(0,0)
-		a2 = Coordenada(0,1)
-		a3 = Coordenada(1,0)
-		a4 = Coordenada(1,1)
+		a2 = Coordenada(2,0)
+		a3 = Coordenada(2,2)
+		a4 = Coordenada(0,2)
 
-		comodo = Comodo(a1, a2, a3, a4)
-		ladrilho = Ladrilho(a1, a2, a3, a4)
-
-		calculadoraLadrilho = CalculadoraLadrilho(comodo, ladrilho)
-		self.assertEqual(calculadoraLadrilho.calcularQtd(), 1)
+		ladrilho = Quadrilatero(a1, a2, a3, a4)
+		area = ladrilho.area()
+		self.assertEqual(ladrilho.area(), 4)
 
 unittest.main()
